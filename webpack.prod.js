@@ -4,14 +4,7 @@ const common = require('./webpack.common.js');
 const path = require("path");
 const fs = require('fs');
 
-const files = fs.readdirSync('./src/tool');
-console.log(files);
-const entry={
-}
-files.forEach(item=>{
-    const name=item.split('.')[0]
-    entry[name]= path.join(__dirname,"/src/tool/"+item)
-})
+
 
 
 
@@ -26,7 +19,7 @@ module.exports = merge(common, {
     //     'myLocalStorage': './src/tool/myLocalStorage.ts',
     // },
     output: {
-        path: path.join(__dirname,"/lib/tool"),
+        path: path.join(__dirname,"/lib"),
         filename: '[name].js',
         libraryTarget: 'umd',
         library: '[name]',
