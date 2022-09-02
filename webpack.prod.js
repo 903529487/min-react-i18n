@@ -10,17 +10,9 @@ const fs = require('fs');
 
 module.exports = merge(common, {
     mode: 'production',
-    // entry:entry,
-        // () => './src/tool',
-    //     {
-    //     'index': './src/tool/index.ts',
-    //     'getUrlParam': './src/tool/getUrlParam.ts',
-    //     'loadJs': './src/tool/loadJs.ts',
-    //     'myLocalStorage': './src/tool/myLocalStorage.ts',
-    // },
     output: {
         path: path.join(__dirname,"/lib"),
-        filename: '[name].js',
+        filename: 'index.js',
         libraryTarget: 'umd',
         library: '[name]',
     },
