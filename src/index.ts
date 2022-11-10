@@ -25,7 +25,7 @@ class MinReactI18n{
                 valueArr.forEach(item => {
                     const key = removeBlock(item)
                     const value = options[key]
-                    if (key && value) {
+                    if (key && String(value)) {
                         const regExp = new RegExp('{' + key + '}', 'g');
                         test = test.replace(regExp, value)
                     }
